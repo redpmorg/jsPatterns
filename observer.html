@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>app JS Framework</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<input type="text" id="subject">
+	<div id="observer">
+		<div id="observer1"></div>
+		<div id="observer2"></div>
+		<div id="observer3"></div>
+	</div>
+	<script type="text/javascript" src="js/Observer.js"></script>
+	<script>
+		window.onload = function(){
+			var app = new DAZ(),
+			subject = document.getElementById('subject'),
+			observer1 = document.getElementById('observer1'),
+			observer2 = document.getElementById('observer2'),
+			observer3 = document.getElementById('observer3');
+
+			app.EXTEND(subject, new app.ISUBJECT());
+			app.EXTEND(observer1, new app.OBSERVER());
+			app.EXTEND(observer2, new app.OBSERVER());
+			app.EXTEND(observer3, new app.OBSERVER());
+			subject.addObserver(observer1);
+			subject.addObserver(observer2);
+			subject.addObserver(observer3);
+
+			subject.addEventListener('keyup', function(){
+				this.notify(this.value)
+			}, false);
+
+			observer1.update = function(val) {
+				this.innerHTML = val;
+			}
+			observer2.update = function(val) {
+				this.innerHTML = val;
+
+			}
+		}
+	</script>
+</body>
+</html>
