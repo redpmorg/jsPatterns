@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"new",
+				"newArgs	currying.js"
+			],
+			[
+				"min",
+				"minArgs"
+			],
+			[
+				"argume",
+				"arguments"
+			],
+			[
+				"has",
+				"hasOwnProperty"
+			],
+			[
 				"st",
 				"strong	<strong>"
 			],
@@ -308,10 +324,6 @@
 				"setRoom"
 			],
 			[
-				"new",
-				"_new_mb"
-			],
-			[
 				"init",
 				"initialWater"
 			],
@@ -502,28 +514,16 @@
 			[
 				"instan",
 				"instances"
-			],
-			[
-				"sfact",
-				"sfactiona	Symfony2 / Controller / Action (annotated)"
-			],
-			[
-				"persi",
-				"persist"
-			],
-			[
-				"sfcolu",
-				"sfobjectcolumn	Symfony2 / Model / Object column doc"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "1_GeneralPatterns/7_for_in_loops.js",
+			"file": "5_FunctionPatterns/API Pattern/currying.js",
 			"settings":
 			{
-				"buffer_size": 1011,
+				"buffer_size": 1684,
 				"line_ending": "Unix"
 			}
 		}
@@ -722,11 +722,30 @@
 	},
 	"file_history":
 	[
+		"/home/leo/Desktop/index.html",
+		"/var/www/jsPatterns/5_FunctionPatterns/API Pattern/currying.js",
+		"/var/www/jsPatterns/5_FunctionPatterns/API Pattern/returning_function.js",
+		"/var/www/jsPatterns/5_FunctionPatterns/API Pattern/configuration_objects.js",
+		"/var/www/jsPatterns/README.md",
+		"/var/www/jsPatterns/5_FunctionPatterns/API Pattern/callback.js",
+		"/var/www/jsPatterns/accessToGlobals.html",
+		"/var/www/jsPatterns/4_Literals&ConstructorsPatterns/6_regular_expresion.js",
+		"/var/www/jsPatterns/4_Literals&ConstructorsPatterns/5_primitive_wrappers.js",
+		"/var/www/jsPatterns/4_Literals&ConstructorsPatterns/4_json.js",
+		"/var/www/jsPatterns/4_Literals&ConstructorsPatterns/3_array_litteral.js",
+		"/var/www/jsPatterns/4_Literals&ConstructorsPatterns/enforcing_new.js",
+		"/var/www/jsPatterns/4_Literals&ConstructorsPatterns/object_literals.js",
+		"/var/www/jsPatterns/1_GeneralPatterns/minimize_globals.js",
+		"/var/www/jsPatterns/1_GeneralPatterns/c_parseInt.js",
+		"/var/www/jsPatterns/1_GeneralPatterns/avoid_eval.js",
+		"/var/www/jsPatterns/1_GeneralPatterns/avoiding-implied-typecasting.js",
+		"/var/www/jsPatterns/1_GeneralPatterns/switch_pattern.js",
+		"/var/www/jsPatterns/1_GeneralPatterns/8_built_in_prototypes.js",
+		"/var/www/jsPatterns/1_GeneralPatterns/7_for_in_loops.js",
 		"/var/www/jsPatterns/1_GeneralPatterns/6_foor_loops.js",
 		"/var/www/jsPatterns/1_GeneralPatterns/5_hoisting.js",
 		"/var/www/jsPatterns/1_GeneralPatterns/single_var_patterns.js",
 		"/var/www/jsPatterns/1_GeneralPatterns/access_to_global.js",
-		"/var/www/jsPatterns/accessToGlobals.html",
 		"/var/www/jsPatterns/ObserverPattern.html",
 		"/var/www/jsPatterns/1_GeneralPatterns/conditionals.js",
 		"/var/www/jsPatterns/1_GeneralPatterns/functionDeclaration.js",
@@ -830,26 +849,7 @@
 		"/var/www/romit/simulation/src/Mark/SimulationBundle/Repository/BusinessRepository.php",
 		"/var/www/romit/simulation/src/Mark/SimulationBundle/Repository/SimulationsRepository.php",
 		"/var/www/romit/simulation/src/Mark/SimulationBundle/Controller/DashboardController.xls",
-		"/var/www/romit/simulation/src/Mark/SimulationBundle/Entity/Simulations.php",
-		"/var/www/romit/simulation/sql/clearAppSimulatiosOnly.sql",
-		"/var/www/romit/simulation/vendor/swiftmailer/swiftmailer/lib/swift_init.php",
-		"/var/www/romit/simulation/simulation.sublime-project",
-		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Dashboard/modalGenerateReport.html.twig",
-		"/var/www/romit/simulation/src/Mark/UsersBundle/Entity/Users.php",
-		"/var/www/romit/simulation/web/uploads/temp/SimulationAPP_Report_TestSim1.xls",
-		"/var/www/romit/simulation/web/uploads/temp/0",
-		"/var/www/romit/simulation/src/Mark/UsersBundle/Utils/UserLogged.php",
-		"/var/www/romit/simulation/vendor/phpoffice/phpexcel/Classes/PHPExcel/IOFactory.php",
-		"/var/www/romit/simulation/src/Mark/UsersBundle/Entity/Users.php~",
-		"/var/www/romit/simulation/documentation/users_import_list.xls",
-		"/var/www/romit/simulation/vendor/symfony/security-acl/Tests/Domain/UserSecurityIdentityTest.php",
-		"/var/www/romit/simulation/vendor/symfony/security-acl/Domain/UserSecurityIdentity.php",
-		"/var/www/romit/simulation/vendor/doctrine/data-fixtures/UPGRADE",
-		"/var/www/romit/simulation/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Translation/PhpExtractor.php",
-		"/var/www/romit/simulation/vendor/symfony/symfony/src/Symfony/Component/Templating/PhpEngine.php",
-		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Dashboard/index.html.twig",
-		"/var/www/romit/simulation/src/Mark/UsersBundle/Controller/UsersMgController.php",
-		"/var/www/romit/simulation/src/Mark/UsersBundle/Resources/views/UsersImport/import_modal.html.twig"
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Entity/Simulations.php"
 	],
 	"find":
 	{
@@ -1034,19 +1034,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "1_GeneralPatterns/7_for_in_loops.js",
+					"file": "5_FunctionPatterns/API Pattern/currying.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1011,
+						"buffer_size": 1684,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								786,
-								786
+								882,
+								882
 							]
 						],
 						"settings":
@@ -1058,8 +1058,8 @@
 								{
 									"1":
 									[
-										785,
-										786
+										934,
+										935
 									]
 								},
 								"icon":
@@ -1074,8 +1074,8 @@
 								{
 									"1":
 									[
-										686,
-										687
+										881,
+										882
 									]
 								},
 								"unmatched":
@@ -1084,6 +1084,11 @@
 							},
 							"bracket_highlighter.regions":
 							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
@@ -1094,58 +1099,53 @@
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
-								"bh_default_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
+								"bh_default_content"
 							],
-							"function_name_status_row": 38,
-							"open_with_edit": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"function_name_status_row": 50,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 532.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1518,7 +1518,7 @@
 		[
 			[
 				"",
-				"/var/www/romit/simulation/simulation.sublime-project"
+				"/var/www/scraper/jobsScraper.sublime-project"
 			]
 		],
 		"width": 380.0
