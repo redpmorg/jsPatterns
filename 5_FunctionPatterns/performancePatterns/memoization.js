@@ -103,7 +103,7 @@ var fibonacci = (function() {
   return f;
 })();
 
-// function foo() is not Refferenntial Transparent because it use a global variable that can change anytime
+// function foo() is not Refferential Transparent because it use a global variable that can change anytime
 //Refferential Transparent mean that our function depends only on its inputes like Fibonavcci sequence above
 var bar = 1;
 function foo(baz) {

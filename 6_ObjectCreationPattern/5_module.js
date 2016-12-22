@@ -1,34 +1,34 @@
 /* Simple module pattern */
-var Module = (function(){
-	this.counter = 0;
-	return {
-		incrementCounter: function() {
-			return ++parent.counter;
-		},
-		resetCounter: function() {
-			counter = 0;
-			return;
-		}
-	}
+var Module = (function() {
+    this.counter = 0;
+    return {
+        incrementCounter: function() {
+            return ++parent.counter;
+        },
+        resetCounter: function() {
+            counter = 0;
+            return;
+        }
+    }
 })();
 
 /* RevealModule Pattern*/
-var RevealModule = (function(){
+var RevealModule = (function() {
 
-	function setModel(inheritance) {
-		return Object.create('undefined' !== inheritance ? inheritance : null);
-	}
+    function setModel(inheritance) {
+        return Object.create('undefined' !== inheritance ? inheritance : null);
+    }
 
-	return {
-		setModel: setModel
-	}
+    return {
+        setModel: setModel
+    }
 })();
 
 /* Passing parameters */
 var jq = "jQuery";
 var _ = "undescore";
 var NewModule = (function(first, second) {
-	return first + " - " + second;
+    return first + " - " + second;
 })(jq, _);
 
 /*
