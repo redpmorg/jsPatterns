@@ -52,4 +52,41 @@ var alien = {
 		return "Hello" + (who ? ", " + who : "") + "!";
 	}
 };
-alien.sayHi('world'); // "Hello, world!"
+alien.sayHi('world'); // "Hello, worldQW
+
+
+/* Other example */
+// a curried add()
+// accepts partial list of arguments
+function add(x, y) {
+	var oldx = x, oldy = y;
+	if (typeof oldy === "undefined") { // #######
+		return function (newy) {
+			return oldx + newy;
+		}
+	}
+	// full application
+	return x + y;
+}
+// test
+// typeof add(5); // "function"
+// add(3)(4); // 7
+
+/* Other example */
+function curry(func, minArgs) {
+	if(minArgs == undefined) {
+		minArgs = 1;
+	}
+
+	return function funcWithArgsFrozen(frozenargs) {
+		var args = Array.prototype.slice.call(arguments);
+		var newArgs = frozenargs.concat(args);
+		if(newArgs.length >= minArgs) {
+			return func.apply(this, newArgs);
+		} else {
+			return funcWithArgsFrozen(newArgs);
+		}
+	}([]);
+
+
+}
