@@ -1,39 +1,56 @@
 //personal example of JS Call and Apply
 
+// //simple approach
+// var Person = {
+//     food: "banana",
+//     eat: function() {
+//             console.log(arguments);
+//             console.log(this.food);
+//         }
+//         return;
+//     }
+// }
+//
+// Persons.eat("Leonard");
+//
+// var fridge = { food: "apples" }
+// Persons.eat.call(fridge, "Tibi");
+//
+// var bag = { food: "cakes" }
+// Persons.eat.apply(bag, ["Luca", "Daz"]);
+//
+// var pocket = { food: "candies" }
+// var other = Persons.eat.bind(pocket);
+// other("Diana");
+
+
+
+// // elaborate a little
+
 // var Persons = {
 //     food: "banana",
 //     eat: function() {
 //         for (var i = 0; i < arguments.length; i += 1) {
 //             console.log(arguments[i] + " eat " + this.food);
 //         }
-//         return 0;
+//         return;
 //     }
 // }
+//
 // Persons.eat("Leonard");
 //
-// var fridge = {
-//     food: "apples"
-// }
-//
+// var fridge = { food: "apples" }
 // Persons.eat.call(fridge, "Tibi");
 //
-// var bag = {
-//   food: "cakes"
-// }
-//
+// var bag = { food: "cakes" }
 // Persons.eat.apply(bag, ["Luca", "Daz"]);
 //
-//
-// var pocket = {
-//   food: "candies"
-// }
-//
+// var pocket = { food: "candies" }
 // var other = Persons.eat.bind(pocket);
-//
 // other("Diana");
 
 
-//Let's elaborate
+//Let's elaborate more
 
 //constructor
 var Person = function(name) {
